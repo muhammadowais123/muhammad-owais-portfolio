@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Owais | Website Developer, Graphic Designer &amp; Mobile App Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Owais, a final-year BSCS student from Karachi, Pakistan, working across website development, WordPress, graphic design and mobile application development.">
+  <meta name="author" content="Muhammad Owais">
+  <meta name="theme-color" content="#f6f2ea">
+
+  <!-- Favicon (inline, so no extra file is needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2410c'/%3E%3Ctext x='32' y='43' font-size='28' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='white'%3EMO%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts (the site falls back to system fonts if these cannot load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       ICON SPRITE
+       Every icon used on the page is defined once here and reused with
+       a <use> tag.
+       ====================================================================== -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+      <line x1="12" y1="5" x2="12" y2="19"/>
+      <polyline points="19 12 12 19 5 12"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </symbol>
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+      <line x1="7" y1="17" x2="17" y2="7"/>
+      <polyline points="7 7 17 7 17 17"/>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </symbol>
+    <symbol id="icon-graduation" viewBox="0 0 24 24">
+      <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+      <path d="M6 12v5c3 2 9 2 12 0v-5"/>
+      <line x1="22" y1="10" x2="22" y2="16"/>
+    </symbol>
+  </svg>
+
+  <!-- Accessibility: lets keyboard users skip the navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+  <!-- ======================================================================
+       SITE HEADER  (logo, navigation, theme toggle, mobile menu button)
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header-inner">
+
+      <!-- Logo -->
+      <a class="site-brand" href="#home" aria-label="Muhammad Owais - back to top">
+        <span class="site-brand-mark">MO</span>
+        <span class="site-brand-name">Muhammad Owais</span>
+      </a>
+
+      <!-- Main navigation (becomes a dropdown panel on small screens) -->
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="#home">Home</a></li>
+          <li><a class="site-nav-link" href="#about">About</a></li>
+          <li><a class="site-nav-link" href="#skills">Skills</a></li>
+          <li><a class="site-nav-link" href="#projects">Projects</a></li>
+          <li><a class="site-nav-link" href="#education">Education</a></li>
+          <li><a class="site-nav-link" href="#experience">Experience</a></li>
+          <li><a class="site-nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header buttons -->
+      <div class="site-header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+          <svg class="icon theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main id="main-content">
+
+    <!-- ====================================================================
+         HERO SECTION
+         Introduction, call-to-action buttons and profile image.
+         Profile image path: images/profile.jpg
+         ==================================================================== -->
+    <section class="hero-section" id="home" aria-labelledby="hero-name">
+      <div class="container hero-container">
+
+        <!-- Hero text -->
+        <div class="hero-content">
+          <p class="hero-location">
+            <svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg>
+            Karachi, Pakistan
+          </p>
+
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name" id="hero-name">Muhammad <em class="hero-name-accent">Owais</em></h1>
+
+          <ul class="hero-roles" aria-label="Professional title">
+            <li class="hero-role">Website Developer</li>
+            <li class="hero-role">Graphic Designer</li>
+            <li class="hero-role">Mobile Application Developer</li>
+          </ul>
+
+          <p class="hero-summary">
+            I build clean, responsive websites, design graphics and develop mobile applications.
+            I'm in the final year of my BSCS at Indus University and keep sharpening my skills through hands-on projects.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="mailto:muhammadowais123.pk@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+              Get in touch
+            </a>
+            <a class="btn btn--outline" href="#projects">
+              View my projects
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-down"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="hero-socials-label">Find me on</span>
+            <a class="icon-button" href="https://github.com/muhammadowais123" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+            </a>
+            <a class="icon-button" href="https://www.linkedin.com/in/muhammad-owais-124a97335" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>
+            </a>
+          </div>
+
+          <dl class="hero-meta">
+            <div class="hero-meta-item">
+              <dt>Studying</dt>
+              <dd>BSCS, Indus University</dd>
+            </div>
+            <div class="hero-meta-item">
+              <dt>Focus</dt>
+              <dd>Web, Design &amp; Mobile</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Hero image: shows images/profile.jpg, or a placeholder if the file is missing -->
+        <div class="hero-image">
+          <div class="hero-image-frame">
+            <div class="hero-image-placeholder" role="img" aria-label="Profile photo placeholder">
+              <svg class="icon hero-image-placeholder-icon" aria-hidden="true"><use href="#icon-user"/></svg>
+              <span class="hero-image-placeholder-title">Your photo goes here</span>
+              <code class="hero-image-placeholder-path">images/profile.jpg</code>
+            </div>
+            <img class="hero-image-photo" src="images/profile.jpg" alt="Portrait of Muhammad Owais" width="480" height="600">
+          </div>
+
+          <!-- Rotating text badge (decorative) -->
+          <div class="hero-badge" aria-hidden="true">
+            <svg class="hero-badge-ring" viewBox="0 0 120 120">
+              <defs>
+                <path id="hero-badge-path" d="M16,60 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+              </defs>
+              <text class="hero-badge-text">
+                <textPath href="#hero-badge-path" textLength="272" lengthAdjust="spacing">WEB • DESIGN • MOBILE • CODE •</textPath>
+              </text>
+            </svg>
+            <span class="hero-badge-core">MO</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         ABOUT SECTION
+         Personal introduction and quick details.
+         ==================================================================== -->
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+
+        <header class="section-heading reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">01</span> About me</p>
+          <h2 class="section-title" id="about-title">Building for the web, with a designer's eye.</h2>
+        </header>
+
+        <div class="about-content">
+
+          <div class="about-text reveal">
+            <p class="about-lead">
+              I'm Muhammad Owais, a final-year Computer Science student at Indus University in Karachi.
+            </p>
+            <p>
+              I have practical knowledge of website development, WordPress, graphic designing and mobile
+              application development. Whether it is laying out a page, shaping a visual idea or building
+              an app screen, I enjoy turning ideas into things people can actually use.
+            </p>
+            <p>
+              I'm continuously improving my technical skills and building projects to gain real experience,
+              learning something new from each one about writing cleaner code and designing better interfaces.
+            </p>
+
+            <ul class="about-focus" aria-label="Areas of focus">
+              <li class="tag">Website Development</li>
+              <li class="tag">WordPress</li>
+              <li class="tag">Graphic Designing</li>
+              <li class="tag">Mobile App Development</li>
+            </ul>
+          </div>
+
+          <aside class="about-card reveal" aria-label="Quick details">
+            <dl class="about-details">
+              <div class="about-detail">
+                <dt>Name</dt>
+                <dd>Muhammad Owais</dd>
+              </div>
+              <div class="about-detail">
+                <dt>Location</dt>
+                <dd>Karachi, Pakistan</dd>
+              </div>
+              <div class="about-detail">
+                <dt>Education</dt>
+                <dd>BSCS, Final Year</dd>
+              </div>
+              <div class="about-detail">
+                <dt>Email</dt>
+                <dd><a class="about-detail-link" href="mailto:muhammadowais123.pk@gmail.com">muhammadowais123.pk@gmail.com</a></dd>
+              </div>
+            </dl>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         SKILLS SECTION
+         To change a skill: edit its name, the level label and the
+         --skill-level value (0 to 1) inside the style attribute.
+         Beginner = 0.3, Intermediate = 0.65, Advanced = 0.9
+         ==================================================================== -->
+    <section class="skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+
+        <header class="section-heading reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">02</span> Skills</p>
+          <h2 class="section-title" id="skills-title">The tools I work with.</h2>
+        </header>
+
+        <ul class="skills-grid" data-reveal-stagger>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">HTML</h3>
+                <span class="skill-level skill-level--advanced">Advanced</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.9"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">CSS</h3>
+                <span class="skill-level skill-level--advanced">Advanced</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.9"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">JavaScript</h3>
+                <span class="skill-level skill-level--intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.65"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">React JS</h3>
+                <span class="skill-level skill-level--beginner">Beginner</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.3"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">WordPress</h3>
+                <span class="skill-level skill-level--advanced">Advanced</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.9"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">C++</h3>
+                <span class="skill-level skill-level--intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.65"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">Graphic Designing</h3>
+                <span class="skill-level skill-level--intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.65"></span></div>
+            </div>
+          </li>
+
+          <li class="skills-grid-item reveal">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3 class="skill-name">Mobile Application Development</h3>
+                <span class="skill-level skill-level--intermediate">Intermediate</span>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span class="skill-bar-fill" style="--skill-level: 0.65"></span></div>
+            </div>
+          </li>
+
+        </ul>
+
+        <p class="skills-note reveal">Bars show my own assessment: Beginner, Intermediate or Advanced.</p>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PROJECTS SECTION
+         Add a new project by copying one <li class="projects-grid-item"> block.
+         ==================================================================== -->
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+
+        <header class="section-heading reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">03</span> Projects</p>
+          <h2 class="section-title" id="projects-title">Things I've built.</h2>
+        </header>
+
+        <ul class="projects-grid" data-reveal-stagger>
+
+          <!-- Project 1 -->
+          <li class="projects-grid-item reveal">
+            <article class="project-card">
+              <div class="project-card-preview" aria-hidden="true">
+                <span class="project-card-index">01</span>
+                <span class="project-card-glyph">&lt;/&gt;</span>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">Netflix Homepage Clone</h3>
+                <p class="project-card-description">A Netflix homepage clone developed using HTML, CSS and JavaScript.</p>
+                <ul class="project-card-tags" aria-label="Technologies used">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+
+          <!-- Project 2 -->
+          <li class="projects-grid-item reveal">
+            <article class="project-card">
+              <div class="project-card-preview" aria-hidden="true">
+                <span class="project-card-index">02</span>
+                <span class="project-card-glyph">C++</span>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">Student Management System</h3>
+                <p class="project-card-description">A student management system developed using C++.</p>
+                <ul class="project-card-tags" aria-label="Technologies used">
+                  <li class="tag">C++</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+
+          <!-- Project 3 -->
+          <li class="projects-grid-item reveal">
+            <article class="project-card">
+              <div class="project-card-preview" aria-hidden="true">
+                <span class="project-card-index">03</span>
+                <span class="project-card-glyph">{ }</span>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">HTML &amp; CSS Practice Projects</h3>
+                <p class="project-card-description">Multiple practice projects built with HTML and CSS.</p>
+                <ul class="project-card-tags" aria-label="Technologies used">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+
+        <div class="projects-more reveal">
+          <p class="projects-more-text">More of my code is on GitHub.</p>
+          <a class="btn btn--outline" href="https://github.com/muhammadowais123" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+            Visit my GitHub
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         EDUCATION SECTION
+         ==================================================================== -->
+    <section class="education-section" id="education" aria-labelledby="education-title">
+      <div class="container">
+
+        <header class="section-heading reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">04</span> Education</p>
+          <h2 class="section-title" id="education-title">Where I'm studying.</h2>
+        </header>
+
+        <div class="education-content reveal">
+          <article class="education-card">
+            <div class="education-card-icon" aria-hidden="true">
+              <svg class="icon"><use href="#icon-graduation"/></svg>
+            </div>
+            <div class="education-card-body">
+              <p class="education-status">Final Year</p>
+              <h3 class="education-degree">Bachelor of Science in Computer Science (BSCS)</h3>
+              <p class="education-university">Indus University</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         EXPERIENCE SECTION
+         Timeline of work experience. Copy an <li class="experience-item">
+         block to add another entry.
+         ==================================================================== -->
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+
+        <header class="section-heading reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">05</span> Experience</p>
+          <h2 class="section-title" id="experience-title">Where I've learned on the job.</h2>
+        </header>
+
+        <ol class="experience-timeline">
+
+          <!-- Experience 1 -->
+          <li class="experience-item reveal">
+            <span class="experience-marker" aria-hidden="true"></span>
+            <article class="experience-card">
+              <header class="experience-card-header">
+                <div class="experience-card-heading">
+                  <h3 class="experience-role">Web Development Intern</h3>
+                  <p class="experience-company">Technology Linkers</p>
+                </div>
+                <p class="experience-duration">3 Months &middot; 2026</p>
+              </header>
+              <p class="experience-details">
+                Improved practical knowledge of HTML, CSS and JavaScript, learned WordPress and worked on practice projects.
+              </p>
+            </article>
+          </li>
+
+          <!-- Experience 2 -->
+          <li class="experience-item reveal">
+            <span class="experience-marker" aria-hidden="true"></span>
+            <article class="experience-card">
+              <header class="experience-card-header">
+                <div class="experience-card-heading">
+                  <h3 class="experience-role">Administrative Experience</h3>
+                  <p class="experience-company">School Administration Office</p>
+                </div>
+              </header>
+              <p class="experience-details">
+                Experience handling school management software, administrative records and office-related tasks.
+                This was an administrative role rather than a software development position.
+              </p>
+              <ul class="experience-card-tags" aria-label="Responsibilities">
+                <li class="tag">School management software</li>
+                <li class="tag">Administrative records</li>
+                <li class="tag">Office tasks</li>
+              </ul>
+            </article>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         CONTACT SECTION
+         ==================================================================== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+
+        <div class="contact-content reveal">
+          <p class="section-eyebrow"><span class="section-eyebrow-number">06</span> Contact</p>
+          <h2 class="contact-title" id="contact-title">Have a project or an opportunity in mind? Let's talk.</h2>
+          <p class="contact-text">
+            The best way to reach me is by email. You can also find me on GitHub and LinkedIn.
+          </p>
+
+          <a class="contact-email" href="mailto:muhammadowais123.pk@gmail.com">muhammadowais123.pk@gmail.com</a>
+
+          <div class="contact-actions">
+            <a class="btn btn--primary" href="mailto:muhammadowais123.pk@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+              Email me
+            </a>
+            <button class="btn btn--outline" id="copyEmailButton" type="button" data-email="muhammadowais123.pk@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#icon-copy"/></svg>
+              <span class="btn-label">Copy email</span>
+            </button>
+            <a class="btn btn--outline" href="https://github.com/muhammadowais123" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+              GitHub
+            </a>
+            <a class="btn btn--outline" href="https://www.linkedin.com/in/muhammad-owais-124a97335" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <p class="contact-location">
+            <svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg>
+            Based in Karachi, Pakistan
+          </p>
+
+          <p class="contact-status" id="copyStatus" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================================
+       SITE FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <p class="site-footer-copy">&copy; <span id="currentYear">2026</span> Muhammad Owais. All rights reserved.</p>
+      <a class="site-footer-top" href="#home">
+        Back to top
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"/></svg>
+      </a>
+    </div>
+  </footer>
+
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
